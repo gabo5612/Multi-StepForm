@@ -1,0 +1,10 @@
+.backgroundPic{
+    background-image: url('../assets/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width: 1024px) {
+    .backgroundPic{
+        background-image: url('../assets/bg-sidebar-mobile.svg');
+    }
+}

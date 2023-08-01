@@ -191,13 +191,13 @@ const SelectPlan = () => {
         </span>
       </div>
       <div className="flex items-center justify-between mt-24 ">
-        <NavLink to="/" className="text-CoolGray text-lg font-semibold" onClick={()=> context.handleStep(0)}>
+        <NavLink to="Multi-StepForm/" className="text-CoolGray text-lg font-semibold" onClick={()=> context.handleStep(0)}>
           Go Back
         </NavLink>
 
         {context.planSelection === true && (
           <NavLink
-            to="/addons"
+            to="/Multi-StepForm/addons"
             className="text-White px-8 py-4 mr-2 rounded-lg border bg-MarineBlue"
             onClick={() => context.handleStep(2)}
           >

@@ -10,11 +10,11 @@ import { useSpring, animated } from '@react-spring/web'
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: "/", element: <YourInfo /> },
-    { path: "plan", element: <SelectPlan /> },
-    { path: "addons", element: <AddOns /> },
-    { path: "summary", element: <Summay /> },
-    { path: "/*", element: <NotFound /> },
+    { path: "/Multi-StepForm/", element: <YourInfo /> },
+    { path: "/Multi-StepForm/plan", element: <SelectPlan /> },
+    { path: "/Multi-StepForm/addons", element: <AddOns /> },
+    { path: "/Multi-StepForm/summary", element: <Summay /> },
+    { path: "/Multi-StepForm/*", element: <NotFound /> },
   ]);
   return routes;
 };

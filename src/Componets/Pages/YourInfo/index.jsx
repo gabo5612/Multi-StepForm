@@ -96,7 +96,7 @@ const YourInfo = () => {
           {context.isValid ? (
             
               <NavLink
-                to="/plan"
+                to="/Multi-StepForm/plan"
                 className={`text-White px-8 py-4 rounded-lg border bg-MarineBlue`}
                 onClick={() => handleNextStep(1)}
               >

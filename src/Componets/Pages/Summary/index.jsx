@@ -44,7 +44,7 @@ total=extraTotal+context.summary.planPrice
             </span>
           </div>
           <NavLink
-            to="/plan"
+            to="/Multi-StepForm/plan"
             className="text-CoolGray text-l font-semibold underline mb-4"
           >
             Change
@@ -77,7 +77,7 @@ total=extraTotal+context.summary.planPrice
         </div>
         <div className="flex justify-between h-20 items-end">
           <NavLink
-            to="/addons"
+            to="/Multi-StepForm/addons"
             className="text-CoolGray text-l font-semibold"
             onClick={() => context.handleStep(2)}
           >

@@ -148,12 +148,12 @@ const Addons = () => {
         </button>
       </div>
       <div className="flex items-center justify-between mt-24">
-        <NavLink to="/plan" className="text-CoolGray text-lg font-semibold" onClick={() => context.handleStep(1)}>
+        <NavLink to="/Multi-StepForm/plan" className="text-CoolGray text-lg font-semibold" onClick={() => context.handleStep(1)}>
           Go Back
         </NavLink>
 
         <NavLink
-          to="/summary"
+          to="/Multi-StepForm/summary"
           className="text-White px-8 py-4 mr-2 rounded-lg border bg-MarineBlue"
           onClick={() => context.handleStep(3)}
         >

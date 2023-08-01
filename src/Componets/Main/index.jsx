@@ -14,7 +14,7 @@ const context=useContext(Context)
         <div className="w-1/3 backgroundPic m-4 rounded-lg">
           <div className="flex  w-1-5 h-1-5 gap-4 p-5 ">
             <div className="p-8">
-              <NavLink to='/'>
+              <NavLink to='/Multi-StepForm'>
               <div className="flex gap-4 mb-8" onClick={()=> context.handleStep(0)}>
                 <span className={`border rounded-full py-2 px-4 font-bold ${context.step[0]? 'bg-LightBlue text-MarineBlue':'text-White'}`}>1</span>
                 <div className="flex flex-col">
@@ -25,7 +25,7 @@ const context=useContext(Context)
                 </div>
               </div>
               </NavLink>
-              <NavLink to='/plan'>
+              <NavLink to='/Multi-StepForm/plan'>
               <div className="flex gap-4 mb-8" onClick={()=> context.handleStep(1)}>
                 <span className={`border rounded-full py-2 px-4 font-bold ${context.step[1]? 'bg-LightBlue text-MarineBlue':'text-White'}`}>2</span>
                 <div className="flex flex-col">
@@ -36,7 +36,7 @@ const context=useContext(Context)
                 </div>
               </div>
               </NavLink>
-              <NavLink to='/addons'>
+              <NavLink to='/Multi-StepForm/addons'>
               <div className="flex gap-4 mb-8" onClick={()=> context.handleStep(2)}>
                 <span className={`border rounded-full py-2 px-4 font-bold ${context.step[2]? 'bg-LightBlue text-MarineBlue':'text-White'}`}>3</span>
                 <div className="flex flex-col">
@@ -47,7 +47,7 @@ const context=useContext(Context)
                 </div>
               </div>
               </NavLink>
-              <NavLink to='/summary'>
+              <NavLink to='/Multi-StepForm/summary'>
               <div className="flex gap-4 mb-8" onClick={()=> context.handleStep(3)}>
                 <span className={`border rounded-full py-2 px-4 font-bold ${context.step[3]? 'bg-LightBlue text-MarineBlue':'text-White'}`}>4</span>
                 <div className="flex flex-col">

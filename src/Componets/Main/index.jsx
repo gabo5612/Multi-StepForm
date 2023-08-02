@@ -9,10 +9,10 @@ const Main = (props) => {
 const context=useContext(Context)
   return (
     <div className="bg-LightBlue w-screen h-screen flex justify-center items-center  ">
-      <div className="bg-White w-3/5 h-4/5 rounded-lg shadow-lg flex">
+      <div className="bg-White w-3/5 h-4/5 rounded-lg shadow-lg flex ">
         <div className="w-1/3 backgroundPic m-4 rounded-lg">
           <div className="flex  w-1-5 h-1-5 gap-4 p-5 ">
-            <div className="p-8">
+            <div className="pl-4 pt-8">
               <NavLink to='/Multi-StepForm'>
               <div className="flex gap-4 mb-8" onClick={()=> context.handleStep(0)}>
                 <span className={`border rounded-full py-2 px-4 font-bold ${context.step[0]? 'bg-LightBlue text-MarineBlue':'text-White'}`}>1</span>
@@ -61,7 +61,7 @@ const context=useContext(Context)
             
           </div>
         </div>
-        <div className="mx-24 my-24 w-3/5">{props.children}</div>
+        <div className="mx-16 my-16 w-3/5">{props.children}</div>
       </div>
     </div>
   );

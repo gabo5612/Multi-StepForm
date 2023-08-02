@@ -90,9 +90,9 @@ const Addons = () => {
           <input
             type="checkbox"
             ref={mpRef}
-            className="w-5 h-5 mx-[-42px] rounded-lg"
+            className="w-5 h-5 rounded-lg"
           />
-          <div className="flex flex-col items-start ml-[-50px]">
+          <div className="flex flex-col items-start ">
             <span className="w-64 text-start text-MarineBlue font-bold text-xl">
               Online service
             </span>
@@ -111,9 +111,9 @@ const Addons = () => {
           <input
             type="checkbox"
             ref={strgRef}
-            className="w-5 h-5 mx-[-42px] rounded-lg"
+            className="w-5 h-5 rounded-lg"
           />
-          <div className="flex flex-col items-start ml-[-50px]">
+          <div className="flex flex-col items-start ">
             <span className="w-64 text-start text-MarineBlue font-bold text-xl">
               Larger storage
             </span>
@@ -132,9 +132,9 @@ const Addons = () => {
           <input
             type="checkbox"
             ref={cpRef}
-            className="w-5 h-5 mx-[-42px] rounded-lg"
+            className="w-5 h-5 rounded-lg"
           />
-          <div className="flex flex-col items-start ml-[-50px]">
+          <div className="flex flex-col items-start ">
             <span className="w-64 text-start text-MarineBlue font-bold text-xl">
               Customizable profile
             </span>

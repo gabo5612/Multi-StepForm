@@ -6,7 +6,6 @@ const MoreInfo = () => {
     return (
         <div>
             <h3>Please enter all the asked infomation</h3>
-
             <button onClick={()=>context.setOpenModal(!context.openModal)}>Okay</button>
         </div>
     );

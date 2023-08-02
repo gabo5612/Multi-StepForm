@@ -12,16 +12,13 @@ const Summary = () => {
 
   const context = useContext(Context);
   const summaryInfos = { ...context.summary };
-  console.log(summaryInfos)
-
   const renderedExtras = summaryInfos.extras;
-  var extraTotal= 0
-  var total=0
-  for(let i=0; i < renderedExtras.length; i++ ){
-    extraTotal=extraTotal+renderedExtras[i].extraPrice
-
+  var extraTotal = 0;
+  var total = 0;
+  for (let i = 0; i < renderedExtras.length; i++) {
+    extraTotal = extraTotal + renderedExtras[i].extraPrice;
   }
-total=extraTotal+context.summary.planPrice
+  total = extraTotal + context.summary.planPrice;
   return (
     <animated.div
       style={animationProps}
@@ -71,26 +68,30 @@ total=extraTotal+context.summary.planPrice
         </div>
 
         <div className="flex justify-between m-6">
-          <span className="text-CoolGray font-semibold">Total (per {context.price ? "year" : "month"})</span>
-          <span className="text-PurplishBlue font-bold text-xl">+${context.isAnExtra? total:context.summary.planPrice}{context.price ? "/yr" : "/mo"}</span>
+          <span className="text-CoolGray font-semibold">
+            Total (per {context.price ? "year" : "month"})
+          </span>
+          <span className="text-PurplishBlue font-bold text-xl">
+            +${context.isAnExtra ? total : context.summary.planPrice}
+            {context.price ? "/yr" : "/mo"}
+          </span>
         </div>
-        </div>
-        <div className="flex justify-between h-20 items-end">
-          <NavLink
-            to="/Multi-StepForm/addons"
-            className="text-CoolGray text-l font-semibold"
-            onClick={() => context.handleStep(2)}
-          >
-            Go Back
-          </NavLink>
-          <NavLink
-            
-            className="text-White px-10 py-4  rounded-lg border bg-PurplishBlue"
-          >
-            Confirm
-          </NavLink>
-        </div>
-      
+      </div>
+      <div className="flex justify-between h-20 items-end">
+        <NavLink
+          to="/Multi-StepForm/addons"
+          className="text-CoolGray text-l font-semibold"
+          onClick={() => context.handleStep(2)}
+        >
+          Go Back
+        </NavLink>
+        <NavLink
+          to="/Multi-StepForm/Thank-you"
+          className="text-White px-10 py-4  rounded-lg border bg-PurplishBlue"
+        >
+          Confirm
+        </NavLink>
+      </div>
     </animated.div>
   );
 };

@@ -16,58 +16,6 @@ const SelectPlan = () => {
     delay: 250,
   });
 
-  const handlePlan = (plan) => {
-    if (plan === 0) {
-      context.setPlan({ planName: "Arcade", planPrice: context.arcPlan });
-      context.setSummary({
-        planName: "Arcade",
-        planPrice: context.arcPlan,
-        extras: {
-          
-        }
-      });
-  
-      context.setPlanSelection(true);
-    } else if (plan === 1) {
-      context.setPlan({ planName: "Advanced", planPrice: context.advPlan });
-      context.setSummary({
-        planName: "Advanced",
-        planPrice: context.advPlan,
-        extras: {
-          
-        }
-      });
-  
-      context.setPlanSelection(true);
-    } else {
-      context.setPlan({ planName: "Pro", planPrice: context.proPlan });
-      context.setSummary({
-        planName: "Pro",
-        planPrice: context.proPlan,
-        extras: {
-          
-        }
-      });
-  
-      context.setPlanSelection(true);
-    }
-  };
-
-  const handleFocus = (index) => {
-    const updatedPlanFocus = context.planFocus.map((value, i) => i === index);
-    context.setPlanFocus(updatedPlanFocus);
-  };
-
-  const handleLeave = (e) => {
-    if (e === 0) {
-      context.setPlanFocus([true, false, false]);
-    } else if (e === 1) {
-      context.setPlanFocus([false, true, false]);
-    } else if (e === 2) {
-      context.setPlanFocus([false, false, true]);
-    }
-  };
-
   return (
     <animated.div
       style={animationProps}
@@ -81,9 +29,9 @@ const SelectPlan = () => {
       </p>
       <div className="flex gap-3 my-4 ">
         <button
-          onClick={() => handlePlan(0)}
-          onFocus={() => handleFocus(0)}
-          onMouseLeave={() => handleLeave(0)}
+          onClick={() => context.handlePlan(0)}
+          onFocus={() => context.handleFocus(0)}
+          onMouseLeave={() => context.handleLeave(0)}
           className={`border flex flex-col  border-CoolGray/30 h-64 w-3/6  rounded-lg cursor-pointer hover:bg-PurplishBlue/5 active:border-PurplishBlue/20 focus:bg-PurplishBlue/5 focus:border-2 focus:border-PurplishBlue/60 ${
             context.planFocus[0] ? "button-container-focus" : ""
           }`}
@@ -110,9 +58,9 @@ const SelectPlan = () => {
         </button>
 
         <button
-          onClick={() => handlePlan(1)}
-          onFocus={() => handleFocus(1)}
-          onMouseLeave={() => handleLeave(1)}
+          onClick={() => context.handlePlan(1)}
+          onFocus={() => context.handleFocus(1)}
+          onMouseLeave={() => context.handleLeave(1)}
           className={`border flex flex-col border-CoolGray/30 h-64  w-3/6  rounded-lg cursor-pointer hover:bg-PurplishBlue/5 active:border-PurplishBlue/20 focus:bg-PurplishBlue/5 focus:border-2 focus:border-PurplishBlue/60 ${
             context.planFocus[1] ? "button-container-focus" : ""
           }`}
@@ -139,9 +87,9 @@ const SelectPlan = () => {
         </button>
 
         <button
-          onClick={() => handlePlan(2)}
-          onFocus={() => handleFocus(2)}
-          onMouseLeave={() => handleLeave(2)}
+          onClick={() => context.handlePlan(2)}
+          onFocus={() => context.handleFocus(2)}
+          onMouseLeave={() => context.handleLeave(2)}
           className={`border flex flex-col border-CoolGray/30 h-64  w-3/6  rounded-lg cursor-pointer hover:bg-PurplishBlue/5 active:border-PurplishBlue/20 focus:bg-PurplishBlue/5 focus:border-2 focus:border-PurplishBlue/60 ${
             context.planFocus[2] ? "button-container-focus" : ""
           }`}
@@ -191,7 +139,7 @@ const SelectPlan = () => {
         </span>
       </div>
       <div className="flex items-center justify-between mt-24 ">
-        <NavLink to="Multi-StepForm/" className="text-CoolGray text-lg font-semibold" onClick={()=> context.handleStep(0)}>
+        <NavLink to="/Multi-StepForm/" className="text-CoolGray text-lg font-semibold" onClick={()=> context.handleStep(0)}>
           Go Back
         </NavLink>
 

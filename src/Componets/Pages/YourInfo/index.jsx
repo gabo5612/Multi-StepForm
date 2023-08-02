@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Context } from "../../Hooks/Hook";
 import { useSpring, animated } from "@react-spring/web";
@@ -30,10 +30,8 @@ const YourInfo = () => {
     delay: 250,
   });
 
-  const handleNextStep = (e) => {
-    e===0? null: context.handleStep(1)
-  };
-  console.log(context.isValid);
+  
+ 
   return (
     <animated.div
       style={animationProps}
@@ -98,7 +96,7 @@ const YourInfo = () => {
               <NavLink
                 to="/Multi-StepForm/plan"
                 className={`text-White px-8 py-4 rounded-lg border bg-MarineBlue`}
-                onClick={() => handleNextStep(1)}
+                onClick={() => context.handleNextStep(1)}
               >
                 Next Step
               </NavLink>
@@ -106,7 +104,7 @@ const YourInfo = () => {
           ) : (
             <button
               className={`text-White px-8 py-4 rounded-lg border bg-MarineBlue`}
-              onClick={() => handleNextStep(0)}
+              onClick={() => context.handleNextStep(0)}
             >
               Next Step
             </button>

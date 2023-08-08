@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
         <animated.div style={animationProps}>
           <Main>
-            <AppRoutes className={} />
+            <AppRoutes />
           </Main>
         </animated.div>
       </BrowserRouter>
